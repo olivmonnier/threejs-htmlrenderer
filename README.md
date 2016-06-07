@@ -36,7 +36,7 @@ Declare an element with id `html3DView` and another with id `view`. In `#html3DV
 
 In your `app.js` in the initalize method, call Html3d and pass camera object:
 ```js
-var html3d = new Html3d();
+var html3d = new HtmlRenderer();
 
 function init() {
   ...

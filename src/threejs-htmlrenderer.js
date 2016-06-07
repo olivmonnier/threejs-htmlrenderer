@@ -1,9 +1,9 @@
-function Html3d() {
+function HtmlRenderer() {
   this.camera;
   this.scene;
   this.renderer;
 }
-Html3d.prototype.init = function(camera) {
+HtmlRenderer.prototype.init = function(camera) {
   this.scene = new THREE.Scene();
   this.camera = camera;
   var target = $('#html3DView').clone();
@@ -31,6 +31,6 @@ Html3d.prototype.init = function(camera) {
   document.getElementById('view').appendChild(this.renderer.domElement);
 }
 
-Html3d.prototype.render = function() {
+HtmlRenderer.prototype.render = function() {
   this.renderer.render(this.scene, this.camera);
 }
