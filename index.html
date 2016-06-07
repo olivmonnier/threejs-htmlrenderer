@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <style media="screen">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="html3DView" style="display: none">
+      <div class="page" data-position-x="400" data-position-y="200" data-position-z="400" data-rotation-y="3.931">
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Hello World</h1>
+          </div>
+        </div>
+      </div>
+      <div class="page" data-position-x="-600" data-position-y="200" data-position-z="400" data-rotation-y="3.14159">
+        <div class="container">
+          <ul class="nav nav-pills">
+            <li><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="view"></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="bower_components/three.js/three.min.js" charset="utf-8"></script>
+    <script src="app/lib/CSS3DRenderer.js" charset="utf-8"></script>
+    <script src="app/lib/OrbitControls.js" charset="utf-8"></script>
+    <script src="app/lib/html3dRenderer.js" charset="utf-8"></script>
+
+    <script src="app/main.js" charset="utf-8"></script>
+  </body>
+</html>

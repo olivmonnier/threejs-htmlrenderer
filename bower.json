@@ -1,0 +1,21 @@
+{
+  "name": "experiment",
+  "authors": [
+    "Olivier Monnier <monnier@indigo-net.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "^0.76.0",
+    "bootstrap": "^3.3.6"
+  }
+}
