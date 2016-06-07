@@ -3,7 +3,7 @@ var controls;
 var scene;
 var light;
 var renderer;
-var html3d = new Html3d();
+var html3d = new HtmlRenderer();
 
 init();
 animate();
