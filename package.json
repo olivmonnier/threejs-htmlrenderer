@@ -1,0 +1,22 @@
+{
+  "name": "threejs-htmlRenderer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/html3dRenderer.min.js",
+  "scripts": {
+    "build": "uglifyjs src/threejs-htmlrenderer.js -o dist/threejs-htmlrenderer.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivmonnier/html3d.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olivmonnier/html3d/issues"
+  },
+  "homepage": "https://github.com/olivmonnier/html3d#readme",
+  "devDependencies": {
+    "uglify-js": "^2.6.2"
+  }
+}
