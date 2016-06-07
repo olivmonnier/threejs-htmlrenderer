@@ -6,7 +6,7 @@ Render html elements in 3d environment.
 ![capture](Capture.PNG)
 
 ## Requirement
-You must include in your html jQuery and three.js.
+You must include in your html jQuery, three.js and the plugin CSS3DRenderer ([link](http://threejs.org/examples/js/renderers/CSS3DRenderer.js)).
 
 ## How to install
 ```terminal
