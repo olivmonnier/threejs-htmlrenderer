@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Threejs-htmlrenderer by olivmonnier</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Threejs-htmlrenderer</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/olivmonnier/threejs-htmlrenderer">View the Project on GitHub <small>olivmonnier/threejs-htmlrenderer</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/olivmonnier/threejs-htmlrenderer/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/olivmonnier/threejs-htmlrenderer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/olivmonnier/threejs-htmlrenderer">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="threejs-htmlrenderer" class="anchor" href="#threejs-htmlrenderer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Threejs-htmlRenderer</h1>
+
+<p>Render html elements in 3d environment.</p>
+
+<p><img src="https://img.shields.io/badge/release-1.0.2-blue.svg" alt="release"></p>
+
+<p><img src="Capture.PNG" alt="capture"></p>
+
+<h2>
+<a id="requirement" class="anchor" href="#requirement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirement</h2>
+
+<p>You must include in your html jQuery, three.js and the plugin CSS3DRenderer (<a href="http://threejs.org/examples/js/renderers/CSS3DRenderer.js">link</a>).</p>
+
+<h2>
+<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install</h2>
+
+<pre lang="terminal"><code>npm install --save threejs-htmlRenderer
+</code></pre>
+
+<p>Include in your .html this library after jQuery and three.js.</p>
+
+<h2>
+<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works</h2>
+
+<p>Declare an element with id <code>html3DView</code> and another with id <code>view</code>. In <code>#html3DView</code>, compose your html elements with as parent the class name <code>page</code>. You can set positions &amp; rotations by attributes <code>data-position-(x|y|z)</code> and <code>data-rotation-(x|y|z)</code>:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+  &lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Example&lt;/<span class="pl-ent">title</span>&gt;
+  &lt;/<span class="pl-ent">head</span>&gt;
+  &lt;<span class="pl-ent">body</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>html3DView<span class="pl-pds">"</span></span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>display: none;<span class="pl-pds">"</span></span>&gt;
+      &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>page<span class="pl-pds">"</span></span> <span class="pl-e">data-position-z</span>=<span class="pl-s"><span class="pl-pds">"</span>-180<span class="pl-pds">"</span></span> <span class="pl-e">data-rotation-y</span>=<span class="pl-s"><span class="pl-pds">"</span>3.14159<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">h1</span>&gt;Hello World&lt;/<span class="pl-ent">h1</span>&gt;
+      &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>view<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+  &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>In your <code>app.js</code> in the initalize method, call HtmlRenderer and pass camera object:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> html3d <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">HtmlRenderer</span>();
+
+<span class="pl-k">function</span> <span class="pl-en">init</span>() {
+  <span class="pl-k">...</span>
+  <span class="pl-smi">html3d</span>.<span class="pl-en">init</span>(camera);
+}</pre></div>
+
+<p>And run the <code>render</code> method in your animate method:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">animate</span>() {
+  <span class="pl-k">...</span>
+  <span class="pl-smi">html3d</span>.<span class="pl-en">render</span>();
+}</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/olivmonnier">olivmonnier</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
