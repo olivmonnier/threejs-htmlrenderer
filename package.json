@@ -10,12 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/olivmonnier/threejs-htmlrenderer.git"
   },
-  "author": "",
+  "keywords": [
+    "3d",
+    "html",
+    "threejs",
+    "html3d"
+  ],
+  "author": "oliv75",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/olivmonnier/html3d/issues"
+    "url": "https://github.com/olivmonnier/threejs-htmlrenderer/issues"
   },
-  "homepage": "https://github.com/olivmonnier/html3d#readme",
+  "homepage": "https://github.com/olivmonnier/threejs-htmlrenderer#readme",
   "devDependencies": {
     "uglify-js": "^2.6.2"
   }
