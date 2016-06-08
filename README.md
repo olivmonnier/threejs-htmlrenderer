@@ -10,7 +10,7 @@ You must include in your html jQuery, three.js and the plugin CSS3DRenderer ([li
 
 ## How to install
 ```terminal
-npm install --save jquery.component
+npm install --save threejs-htmlRenderer
 ```
 Include in your .html this library after jQuery and three.js.
 
