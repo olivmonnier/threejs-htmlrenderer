@@ -1,6 +1,6 @@
 {
   "name": "threejs-htmlRenderer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/html3dRenderer.min.js",
   "scripts": {

@@ -1,7 +1,7 @@
 # Threejs-htmlRenderer
 Render html elements in 3d environment.
 
-![release](https://img.shields.io/badge/release-1.0.2-blue.svg)
+![release](https://img.shields.io/badge/release-1.0.3-blue.svg)
 
 ![capture](Capture.PNG)
 
