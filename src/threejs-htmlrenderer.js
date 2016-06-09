@@ -29,6 +29,12 @@ HtmlRenderer.prototype.init = function(camera) {
   this.renderer.domElement.style.position = 'absolute';
   this.renderer.domElement.style.top = 0;
   document.getElementById('view').appendChild(this.renderer.domElement);
+
+  window.addEventListener('resize', function() {
+    self.renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  }, false);
 }
 
 HtmlRenderer.prototype.render = function() {
